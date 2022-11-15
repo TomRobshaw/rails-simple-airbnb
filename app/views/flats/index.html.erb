@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+<div class="container col-12">
+<h1>Flats</h1>
+  <div id="flats" class="row display-flex flex-wrap-wrap">
+  <% @flats.each do |flat| %>
+  <div class="col-md-4 mt-1">
+    <div class="card">
+      <img src="https://source.unsplash.com/random/100x100/?img=1" class="card-img-top" alt="...">
+        <%= render flat %>
+        <p>
+          <div class="card-body">
+            <%= link_to  "Show this flat", flat, class:"btn btn-primary" %>
+          </div>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New flat", new_flat_path, class:"btn btn-primary" %>
+</div>
